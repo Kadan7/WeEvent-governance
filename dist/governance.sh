@@ -19,7 +19,7 @@ start(){
         echo "governance is running, (PID=$currentgovernance_pid)"
     else
         nohup java ${JAVA_OPTS} -Xbootclasspath/a:./conf -Djava.security.egd=file:/dev/./urandom -jar ./apps/*  >/dev/null 2>&1 &
-        sleep 1
+        sleep 3
         eventgovernance_pid=$!
         if [ -n "$eventgovernance_pid" ];then
             echo "start governance success (PID=$eventgovernance_pid)"
@@ -27,7 +27,7 @@ start(){
                  echo "${eventgovernance_pid}" >$governancepid_path
             else
                  touch $governancepid_path;
-                 sleep 1
+                 sleep 3
                  echo "${eventgovernance_pid}" >$governancepid_path
             fi
             
