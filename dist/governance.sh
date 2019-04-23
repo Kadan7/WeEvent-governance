@@ -18,7 +18,8 @@ start(){
     if [ -n "$currentgovernance_pid" ];then
         echo "governance is running, (PID=$currentgovernance_pid)"
     else
-        nohup java ${JAVA_OPTS} -Xbootclasspath/a:./conf -Djava.security.egd=file:/dev/./urandom -jar ./apps/*  >/dev/null 2>&1 &
+
+        nohup java ${JAVA_OPTS} -Xbootclasspath/a:./conf:./html -Djava.security.egd=file:/dev/./urandom -jar ./apps/*  >/dev/null 2>&1 &
         sleep 3
         eventgovernance_pid=$!
         if [ -n "$eventgovernance_pid" ];then
@@ -84,7 +85,7 @@ monitor(){
         echo "`date`: governance is running(PID=$eventgovernance_pid)"
     else
         echo "`date`: governance is not running,restart governance now"
-        ./governance.sh start
+        start
     fi   
 }
 
