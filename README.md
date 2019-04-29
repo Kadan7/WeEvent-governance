@@ -1,5 +1,5 @@
-# 注意：
-WeEvent-governance工程，已经作为一个子模块迁移到https://github.com/WeBankFinTech/WeEvent里。 从0.9.0以后版本，这个工程不再维护。
+# 注意
+WeEvent-governance工程，已经作为一个子模块迁移到https://github.com/WeBankFinTech/WeEvent 。从0.9.0以后版本，这个工程不再维护。
 
 ## Governance 介绍
 Governance是一个的可支持事件治理、区块链节点分析、系统监控预警的Web管理平台端。该服务主要是治理`Topic`、分析区块链节点数据和监控预警，并展示在`Web`页面。
